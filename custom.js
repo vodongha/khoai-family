@@ -4,8 +4,7 @@
   ]
 
   // Tạo slideshow container
-  const slideshow = document.createElement('div');
-  slideshow.id = 'slideshow';
+  const slideshow = document.querySelector('#slideshow');
 
   const prevBtn = document.createElement('button');
   prevBtn.className = 'nav-btn';
