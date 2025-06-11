@@ -26,7 +26,7 @@
   slideshow.appendChild(nextBtn);
   slideshow.appendChild(imageCounter);
   
-  document.body.appendChild(slideshow);
+  // document.body.appendChild(slideshow);
   document.querySelector('p.title').insertAdjacentElement('afterend', slideshow);
 
   let currentIndex = 0;
