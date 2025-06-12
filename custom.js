@@ -1,5 +1,4 @@
-  let images = [];
-  
+ 
   const iconFullScreen = `<div style="display: flex; justify-content: center; align-items: center; height: 20px; width: 20px;">
   <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
           <path d="M9 3H5a2 2 0 0 0-2 2v4h2V5h4V3zm6 0v2h4v4h2V5a2 2 0 0 0-2-2h-4zm4 14h-4v2h4a2 2 0 0 0 2-2v-4h-2v4zm-14-4H3v4a2 2 0 0 0 2 				2h4v-2H5v-4z"/>
