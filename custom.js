@@ -1,7 +1,4 @@
-const images = [
-    "https://scontent.fsgn1-1.fna.fbcdn.net/v/t39.30808-6/505382872_9060787680690569_687422788403423114_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE1zU1sTyCRjqfm1xOVZtgPT3vD2dejNiRPe8PZ16M2JAKzBMWmcKOlApln3RlnlVpWwxSTJdqT4h0iCiIFGDBp&_nc_ohc=x6pd3kA_yOAQ7kNvwFuuAAc&_nc_oc=Adl-w5glE-dLbIMtjHEP-0LRTv46fhEJ1T51Zm6ixTDF5tic1roHbEXcR42sq0fUqy4&_nc_zt=23&_nc_ht=scontent.fsgn1-1.fna&_nc_gid=0XCeCEy16_Hnn3E1ZWt2Kg&oh=00_AfOrLB57-0E2yDVWn1PQWbr5PpYjyd5Esg3uNtC7LC7x9Q&oe=684F2661",
-    "https://scontent.fsgn1-1.fna.fbcdn.net/v/t39.30808-6/505396942_9060787874023883_4075674571826652095_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG6um2QcYHgm0ctRwT4mkeiEnm0h2yzklASebSHbLOSUOpFo1hUGYyTns2C_YzNd047kazsMBi5WYsDQByBlrUA&_nc_ohc=g8eHtQbgoK8Q7kNvwGpR3cs&_nc_oc=AdlGQDaq55wHm4n8d23KPPXFLrMSUXQS3792vJpL2PiT7aBLcN0dRuOuV4nCaxF5TGQ&_nc_zt=23&_nc_ht=scontent.fsgn1-1.fna&_nc_gid=peCi3Hwc0HROtXIOWNq-Zw&oh=00_AfMvX0oHA5OXx4tc86p8UsHDc18KcxL7etB5BODdm7vwKA&oe=684F1AF6",
-  ];
+  let images = [];
   
   const iconFullScreen = `<div style="display: flex; justify-content: center; align-items: center; height: 20px; width: 20px;">
   <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
