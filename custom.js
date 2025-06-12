@@ -1,10 +1,13 @@
+document.addEventListener('DOMContentLoaded', function () {
   const images = window.images || [];
 
+  if (!images.length) return;
+
   const iconFullScreen = `<div style="display: flex; justify-content: center; align-items: center; height: 20px; width: 20px;">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
-          <path d="M9 3H5a2 2 0 0 0-2 2v4h2V5h4V3zm6 0v2h4v4h2V5a2 2 0 0 0-2-2h-4zm4 14h-4v2h4a2 2 0 0 0 2-2v-4h-2v4zm-14-4H3v4a2 2 0 0 0 2 				2h4v-2H5v-4z"/>
-        </svg>
-  </div>`
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+      <path d="M9 3H5a2 2 0 0 0-2 2v4h2V5h4V3zm6 0v2h4v4h2V5a2 2 0 0 0-2-2h-4zm4 14h-4v2h4a2 2 0 0 0 2-2v-4h-2v4zm-14-4H3v4a2 2 0 0 0 2 2h4v-2H5v-4z"/>
+    </svg>
+  </div>`;
 
   const slideshow = document.createElement('div');
   slideshow.id = 'slideshow';
@@ -27,14 +30,17 @@
   fullscreenBtn.id = 'fullscreenBtn';
   fullscreenBtn.innerHTML = iconFullScreen;
 
-
   slideshow.appendChild(prevBtn);
   slideshow.appendChild(nextBtn);
   slideshow.appendChild(imageCounter);
   slideshow.appendChild(fullscreenBtn);
 
-  document.body.appendChild(slideshow);
-  document.querySelector('p.title').insertAdjacentElement('afterend', slideshow);
+  const titleEl = document.querySelector('p.title');
+  if (titleEl) {
+    titleEl.insertAdjacentElement('afterend', slideshow);
+  } else {
+    document.body.appendChild(slideshow);
+  }
 
   let currentIndex = 0;
   let interval;
@@ -68,12 +74,12 @@
     showImage((currentIndex - 1 + images.length) % images.length);
   }
 
-  document.getElementById('nextBtn').addEventListener('click', () => {
+  nextBtn.addEventListener('click', () => {
     nextImage();
     resetInterval();
   });
 
-  document.getElementById('prevBtn').addEventListener('click', () => {
+  prevBtn.addEventListener('click', () => {
     prevImage();
     resetInterval();
   });
@@ -82,9 +88,7 @@
     if (!document.fullscreenElement) {
       slideshow.requestFullscreen().then(() => {
         fullscreenBtn.textContent = 'X';
-      }).catch(err => {
-        return;
-      });
+      }).catch(() => {});
     } else {
       document.exitFullscreen().then(() => {
         fullscreenBtn.innerHTML = iconFullScreen;
@@ -118,7 +122,6 @@
   startInterval();
 
   const timeEl = document.querySelector("div.post-header-line-1");
-
   if (timeEl) {
     const newEl = document.createElement("p");
     newEl.className = "date-travel";
@@ -126,6 +129,7 @@
     timeEl.replaceWith(newEl);
   }
 
+  // Chống sao chép, mở dev tools, chuột phải
   document.addEventListener('keydown', function(e) {
     if (
       e.key === 'F12' ||
@@ -147,3 +151,4 @@
   document.addEventListener('selectstart', e => {
     e.preventDefault();
   });
+});
