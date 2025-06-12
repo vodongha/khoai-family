@@ -4,7 +4,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
   }
-  
+
   #slideshow {
     position: relative;
     max-width: 800px;
@@ -27,6 +27,7 @@ body {
     opacity: 1;
     position: relative;
   }
+
   .nav-btn {
     position: absolute;
     top: 50%;
@@ -40,22 +41,25 @@ body {
     z-index: 10;
     padding: 0 10px;
     line-height: 1;
-
     font-family: 'Segoe UI Symbol', 'Arial Unicode MS', Arial, sans-serif;
     font-weight: 300;
   }
 
   #prevBtn { left: 0; }
   #nextBtn { right: 0; }
-  
+
   p.title {
+    font-size: 25px;
+  }
+  
+  p.content {
     font-size: 15px;
   }
+  
   .date-travel {
     color: red;
   }
 
-  /* Số ảnh hiện tại / tổng ảnh */
   #image-counter {
     position: absolute;
     top: 10px;
@@ -69,4 +73,19 @@ body {
     z-index: 20;
     user-select: none;
     font-family: Arial, sans-serif;
+  }
+
+  #fullscreenBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    z-index: 20;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 18px;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
   }
